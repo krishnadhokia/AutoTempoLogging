@@ -9,18 +9,10 @@ namespace TempoLogging
 {
     public class TempoAPI
     {
-        public async Task<bool> Log(string issueId)
+        public async Task<bool> Log(TempoLogDetails tempoLogDetails)
         {
             bool isLogged = false;
-            TempoLogDetails tempoLogDetails = new TempoLogDetails()
-            {
-                authorAccountId = "6226d71159c0740069dabd57",
-                description = "Testing Tempo Outlook Integration",
-                issueId = Convert.ToInt32(issueId),
-                startDate = DateTime.Now.Date.ToString("yyyy-MM-dd"),
-                startTime = "20:06:00",
-                timeSpentSeconds = 3600
-            };
+
             // Tempo worklog endpoint
             string tempoEndpoint = "https://api.tempo.io";
 
@@ -29,7 +21,7 @@ namespace TempoLogging
             httpClient.BaseAddress = new Uri(tempoEndpoint);
 
             // Set Jira credentials
-            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer /*Add your tempo token*/");
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer mlYyTDFIwHgxanwM7ZRBmPO85yFTe3");
 
             string tempoUrl = "/4/worklogs";
             // serialize tempo details class to pass payload
@@ -42,7 +34,7 @@ namespace TempoLogging
 
                 // Check response status
                 isLogged = response.IsSuccessStatusCode;
-                
+
             }
             catch (Exception ex)
             {
