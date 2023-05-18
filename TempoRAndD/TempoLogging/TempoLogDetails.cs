@@ -9,4 +9,9 @@
         public string startTime { get; set; }
         public int timeSpentSeconds { get; set; }
     }
+    public class JiraResponse
+    {
+        public string issueId { get; set; }
+        public string accountId { get; set; }
+    }
 }

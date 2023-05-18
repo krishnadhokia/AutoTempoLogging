@@ -6,9 +6,9 @@ namespace TempoLogging
 {
     public class JiraAPI
     {
-        public static async Task<string> GetIssueIdUsingKey(string jiraIssueKey)
+        public static async Task<JiraResponse> GetIssueIdUsingKey(string jiraIssueKey)
         {
-            string issueId = "";
+            JiraResponse jiraResponse = new JiraResponse();
             try
             {
                 string jiraApiUrl = "https://advancedcsg.atlassian.net/rest/api/"; // Jira API base URL
@@ -36,9 +36,9 @@ namespace TempoLogging
                     string responseBody = await response.Content.ReadAsStringAsync();
 
                     // Parse the response JSON to extract the issue ID
-                    issueId = ParseJiraIssueId(responseBody);
+                    jiraResponse = ParseJiraIssueId(responseBody);
 
-                    Console.WriteLine($"Issue ID for Jira Key {jiraIssueKey}: {issueId}");
+                    
                 }
                 else
                 {
@@ -50,19 +50,23 @@ namespace TempoLogging
             {
                 throw ex;
             }
-            return issueId;
+            return jiraResponse;
         }
-        static string ParseJiraIssueId(string responseBody)
+        static JiraResponse ParseJiraIssueId(string responseBody)
         {
+            JiraResponse jiraResponse = new JiraResponse();
             // Parse the response JSON to extract the issue ID
             // Implement your own logic here based on the structure of the response
             // Return the issue ID
 
             // Example implementation assuming the response body contains JSON data with an "id" field representing the issue ID
             dynamic jsonResponse = Newtonsoft.Json.JsonConvert.DeserializeObject(responseBody);
-            string issueId = jsonResponse.id;
 
-            return issueId;
+
+            jiraResponse.issueId = jsonResponse.id;
+            jiraResponse.accountId = jsonResponse.fields.assignee.accountId;
+
+            return jiraResponse;
         }
     }
 }
