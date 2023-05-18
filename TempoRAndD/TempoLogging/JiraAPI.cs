@@ -20,7 +20,7 @@ namespace TempoLogging
                 client.BaseAddress = new Uri(jiraApiUrl);
 
                 // Add necessary headers, such as authentication or content type if required
-                client.DefaultRequestHeaders.Add("Authorization", "Basic a3Jpc2huYS5kaG9raXlhQG9uZWFkdmFuY2VkLmNvbTpBVEFUVDN4RmZHRjBwN3pJaDdkTk1GZmFEeW9DX0Z0SVJVbnFxa1VZR0lFdnNPU0FGeXZTa09na05uQ1AxN0hfZXl3OXQ2ekdqTzNuQU5fdk5MdHdTMWtfMXV4MDYyODZEV0lPX2JZNEtVRE1oTTE0WmdxUkZaU2dnUFluVVlTSGtjeFFZTFdHQlpobjF3OFdCTHFvZGFKV0J6aHJhRE93eERxMHRwSWlDVk5OaXVRUVN4SkpXSWM9QkUyN0M1REI=");
+                client.DefaultRequestHeaders.Add("Authorization", "Basic /* Add your Jira Token */");
 
                 // Build the request URL
                 string requestUrl = $"3/issue/{jiraIssueKey}";

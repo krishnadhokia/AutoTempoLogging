@@ -29,7 +29,7 @@ namespace TempoLogging
             httpClient.BaseAddress = new Uri(tempoEndpoint);
 
             // Set Jira credentials
-            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer NKKVOZh47L6oCAiTzHg0MdSU79gHAX");
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer /*Add your tempo token*/");
 
             string tempoUrl = "/4/worklogs";
             // serialize tempo details class to pass payload
