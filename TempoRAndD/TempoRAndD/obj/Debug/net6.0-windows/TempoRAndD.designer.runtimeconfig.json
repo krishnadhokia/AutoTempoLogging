@@ -12,10 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\pinkesh.khatri\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\pinkesh.khatri\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-      "C:\\Microsoft\\Xamarin\\NuGet",
+      "C:\\Users\\Krishna.dhokiya\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Krishna.dhokiya\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {
