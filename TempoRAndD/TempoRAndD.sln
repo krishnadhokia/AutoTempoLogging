@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempoRAndD", "TempoRAndD\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookTempoAddIn", "OutlookTempoAddIn\OutlookTempoAddIn.csproj", "{D3926079-5522-4D19-B342-34E0A9868EB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempoRAndDFrameWork", "TempoRAndDFrameWork\TempoRAndDFrameWork.csproj", "{9EAA94CC-3038-472D-BDD8-07A8EC7D083B}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempoLogging", "TempoLogging\TempoLogging.csproj", "{A84C6DB7-23C6-40D3-9039-BAFE8015A519}"
 EndProject
 Global
@@ -23,6 +25,10 @@ Global
 		{D3926079-5522-4D19-B342-34E0A9868EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3926079-5522-4D19-B342-34E0A9868EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3926079-5522-4D19-B342-34E0A9868EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EAA94CC-3038-472D-BDD8-07A8EC7D083B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAA94CC-3038-472D-BDD8-07A8EC7D083B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAA94CC-3038-472D-BDD8-07A8EC7D083B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAA94CC-3038-472D-BDD8-07A8EC7D083B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A84C6DB7-23C6-40D3-9039-BAFE8015A519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A84C6DB7-23C6-40D3-9039-BAFE8015A519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A84C6DB7-23C6-40D3-9039-BAFE8015A519}.Release|Any CPU.ActiveCfg = Release|Any CPU

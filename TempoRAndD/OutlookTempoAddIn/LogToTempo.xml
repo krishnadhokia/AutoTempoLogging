@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns">
+        <group id="ContentGroup" label="Content">
+          <button id="btnLog" label="Log Meetings"
+               screentip="Log" onAction="OnTextButton"
+               supertip="Insert Meetings to Tempo."/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
